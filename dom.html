@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">Paragraph 1</p>
+    <p class="pcls">Paragraph 2</p>
+    <p class="pcls">Paragraph 3</p>
+    <p id="print1"></p>
+    <p id="print2"></p>
+    <p id="print3"></p>
+    <p id="print"></p>
+    <script>
+        // id=document.getElemetBYId("p1");
+        // document.write=id.innerHTML;
+
+        // id=document.getElementsByTagName("p");
+        // document.write=id[0].innerHTML;
+
+        const i=document.getElementById("p1");
+        document.getElementById("print1").innerHTML="ID :"+i.innerHTML;
+
+        const name=document.getElementsByClassName("pcls");
+        document.getElementById("print2").innerHTML="CLASS :"+name[1].innerHTML;
+
+        const tag=document.getElementsByTagName("p");
+        document.getElementById("print3").innerHTML="TAG :"+tag[1].innerHTML;
+        
+        const t=document.querySelectorAll("p.pcls");
+        document.getElementById("print").innerHTML="Query :"+t[1].innerHTML.toUpperCase();
+         
+       document.querySelector("p").style.color="blue"; 
+    </script>
+</body>
+</html>
